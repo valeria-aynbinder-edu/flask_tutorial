@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo App</title>
+
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+<h2>Echo with PARAMETRIZED jinja template</h2>
+<form action="/echo" method="POST">
+    <input name="text">
+    <input type="submit" value="Echo">
+</form>
+
+<img src="/static/img/funny_cat.jpeg" />
+
+{% if text %}
+    You said: {{ text }}
+{% endif %}
+
+</body>
+</html>

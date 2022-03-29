@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo App</title>
+</head>
+<body>
+<h2>Echo with PARAMETRIZED jinja template</h2>
+<form action="/echo" method="POST">
+    <input name="text">
+    <input type="submit" value="Echo">
+</form>
+
+{% if text %}
+    You said: {{ text }}
+{% endif %}
+
+</body>
+</html>
