@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+{% if not radio %}
+<form action="/poll" method="POST">
+    <input type="radio" id="DJANGO" name="fav_language" value="DJANGO">
+    <label for="DJANGO">Django</label><br>
+    <input type="radio" id="FLASK" name="fav_language" value="FLASK">
+    <label for="FLASK">Flask</label><br>
+    <input type="submit" value="submit">
+</form>
+{% endif %}
+<a href="/results">
+    <button>Results</button>
+</a>
+{% if radio %}
+<h1>You picked: {{ radio }}</h1>
+<h1>Thank you</h1>
+{% endif %}
+</body>
+</html>
